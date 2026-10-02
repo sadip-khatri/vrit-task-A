@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="page-shell loading-page"><div className="loading-kicker"/><div className="loading-title"/><div className="loading-grid">{Array.from({length:8},(_,i)=><div className="skeleton-card" key={i}><div/><span/><i/></div>)}</div></div>}

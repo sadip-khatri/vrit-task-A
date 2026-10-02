@@ -1,0 +1,2 @@
+'use client';
+export default function ErrorPage({reset}:{error:Error & {digest?:string};reset:()=>void}){return <div className="error-page"><span className="empty-mark">✳</span><p className="eyebrow">A small pause</p><h1>Something got <em>in the way.</em></h1><p>We couldn’t load this page just now. Please give it another try.</p><button className="button-primary" onClick={()=>reset()}>Try again <span>↗</span></button></div>}
