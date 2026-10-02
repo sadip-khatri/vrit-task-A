@@ -8,7 +8,7 @@ export class ApiError extends Error {
 export async function apiFetch<T>(path: string, init?: RequestInit): Promise<T> {
   let response: Response;
   try {
-    response = await fetch(`${API_BASE}${path}`, { ...init, headers: { Accept: 'application/json', ...init?.headers } });
+    response = await fetch(`${API_BASE}${path}`, { ...init, headers: { Accept: 'application/json', 'User-Agent': 'Mozilla/5.0 (compatible; VritStore/1.0)', ...init?.headers } });
   } catch {
     throw new ApiError('We could not reach the store. Check your connection and try again.');
   }
